@@ -13,6 +13,5 @@
     "semiColons": true,
     "singleQuote": true,
     "useTabs": false
-  },
-  "lock": false
+  }
 }
