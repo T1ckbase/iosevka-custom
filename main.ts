@@ -8,3 +8,5 @@ const res = await octokit.repos.getLatestRelease({
 });
 
 console.log(res.data.tag_name);
+
+const kv = new Deno.Kv();
