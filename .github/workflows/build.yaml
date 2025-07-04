@@ -10,24 +10,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Checkout Iosevka repository
+        uses: actions/checkout@v4
         with:
-          node-version: latest
+          repository: be5invis/Iosevka
+          path: iosevka
+
+      - name: Copy custom configuration
+        run: |
+          cp private-build-plans.toml iosevka/private-build-plans.toml
+
+      - name: Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ttfautohint
-          npm install
+          sudo apt update
+          sudo apt install -y ttfautohint
+          cd iosevka
+          bun install
 
       - name: Build Iosevka fonts
-        run: npm run build -- ttf::IosevkaCustom
+        run: |
+          cd iosevka
+          bun run build -- ttf::IosevkaCustom
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: iosevka-fonts
-          path: dist/IosevkaCustom/ttf/*.ttf
+          path: iosevka/dist/IosevkaCustom/ttf/*.ttf
           if-no-files-found: error
           retention-days: 7
