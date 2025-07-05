@@ -2,7 +2,7 @@
 
 [buildPlans.IosevkaCustom]
 family = "Iosevka Custom"
-spacing = "term"
+spacing = "fixed"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
