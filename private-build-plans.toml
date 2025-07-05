@@ -8,13 +8,16 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
+[buildPlans.IosevkaCustom.variants]
+inherits = "ss14"
+
 [buildPlans.IosevkaCustom.weights.Regular]
 shape = 400
 menu = 400
 css = 400
 
 [buildPlans.IosevkaCustom.widths.Normal]
-shape = 548
+shape = 600
 menu = 5
 css = "normal"
 
