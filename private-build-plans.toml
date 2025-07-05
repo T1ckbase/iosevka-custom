@@ -8,6 +8,7 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
+# JetBrains Mono Style (ss14)
 [buildPlans.IosevkaCustom.variants]
 inherits = "ss14"
 
