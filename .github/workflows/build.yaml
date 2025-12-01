@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout Iosevka repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: be5invis/Iosevka
           path: iosevka
@@ -35,10 +35,11 @@ jobs:
       - name: Build Iosevka fonts
         run: |
           cd iosevka
-          bun run build -- ttf::IosevkaCustom
+          # bun run build -- ttf::IosevkaCustom
+          bunx --bun verda -f verdafile.mjs ttf::IosevkaCustom
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: iosevka-custom
           path: iosevka/dist/IosevkaCustom/TTF/*.ttf
