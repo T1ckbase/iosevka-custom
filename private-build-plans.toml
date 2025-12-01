@@ -12,7 +12,7 @@ exportGlyphNames = false
 # inherits = "ss14"
 
 [buildPlans.IosevkaCustom.variants.design]
-brace = "curly-flat-boundary"
+brace = "straight"
 
 [buildPlans.IosevkaCustom.weights.Regular]
 shape = 400
