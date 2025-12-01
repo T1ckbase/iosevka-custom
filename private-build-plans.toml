@@ -7,9 +7,12 @@ serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-# JetBrains Mono Style (ss14)
-[buildPlans.IosevkaCustom.variants]
-inherits = "ss14"
+# # JetBrains Mono Style (ss14)
+# [buildPlans.IosevkaCustom.variants]
+# inherits = "ss14"
+
+[buildPlans.IosevkaCustom.variants.design]
+brace = "curly-flat-boundary"
 
 [buildPlans.IosevkaCustom.weights.Regular]
 shape = 400
