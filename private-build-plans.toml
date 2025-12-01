@@ -6,7 +6,6 @@ spacing = "fixed"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
-noLigation = true
 
 # JetBrains Mono Style (ss14)
 [buildPlans.IosevkaCustom.variants]
@@ -18,7 +17,7 @@ menu = 400
 css = 400
 
 [buildPlans.IosevkaCustom.widths.Normal]
-shape = 600
+shape = 548
 menu = 5
 css = "normal"
 
@@ -27,9 +26,3 @@ angle = 0
 shape = "upright"
 menu = "upright"
 css = "normal"
-
-[buildPlans.IosevkaCustom.slopes.Italic]
-angle = 9.4
-shape = "italic"
-menu = "italic"
-css = "italic"
