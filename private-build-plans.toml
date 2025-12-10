@@ -15,6 +15,6 @@ exportGlyphNames = false
 # brace = "curly-flat-boundary"
 
 [buildPlans.IosevkaCustom.widths.Normal]
-shape = 560
+shape = 564
 menu = 5
 css = "normal"
